@@ -1,0 +1,123 @@
+/* src/styles/TimeSlotPage.css */
+
+:root {
+  --primary-color: #ffffff; /* White background */
+  --accent-color: #007bff; /* Modern blue */
+  --highlight-color: #ff4081; /* Neon pink for hover and accents */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Soft shadows */
+  --border-radius: 10px; /* Rounded corners */
+  --text-color: #333; /* Dark gray text */
+  --hover-color: #ff4081; /* Neon pink for hover effects */
+  --card-bg-color: #f9f9f9; /* Light gray for card background */
+  --button-color: #007bff; /* Soft blue button */
+  --button-hover-color: #0056b3; /* Darker blue for button hover */
+  --font-family: 'Roboto', sans-serif; /* Clean modern font */
+  --transition-speed: 0.3s; /* Smooth transition speed */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.TimeSlotPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.TimeSlotPage h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition-speed);
+}
+
+.TimeSlotPage h2:hover {
+  color: var(--highlight-color);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap; /* Ensure no wrapping */
+  overflow-x: auto; /* Scrollable for larger screens */
+  max-width: 100%; /* Allow full width */
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 12px var(--shadow-color);
+  width: 220px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  margin: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.card img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  height: 150px;
+  transition: transform var(--transition-speed);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.button {
+  background-color: var(--button-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  box-shadow: 0 8px 12px var(--shadow-color);
+}
+
+.button:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 18px var(--shadow-color);
+}
+
+.button:active {
+  transform: translateY(2px);
+}
